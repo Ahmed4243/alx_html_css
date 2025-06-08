@@ -1,0 +1,24 @@
+/* Make <body> a flex container, stacking children vertically */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make <main> a flex container with horizontal layout */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* allow main to size automatically */
+}
+
+/* Article takes 2/3 of the horizontal space */
+article {
+  flex: 2;
+  overflow-y: auto; /* enable vertical scroll if needed */
+}
+
+/* Aside takes 1/3 of the horizontal space */
+aside {
+  flex: 1;
+  overflow-y: auto; /* enable vertical scroll if needed */
+}
