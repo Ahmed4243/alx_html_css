@@ -1,0 +1,269 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #ff6565;
+  --text-color: white;
+  --max-width: 1000px;
+  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: #000;
+  color: var(--text-color);
+}
+
+.hero {
+  background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--main-color);
+}
+
+/* HERO CONTENT */
+.hero-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+}
+
+.hero-content button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hero-content button:hover,
+.hero-content button:active {
+  opacity: 0.9;
+}
+
+.sub-text {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content button {
+    width: 100%;
+  }
+}
+.what-we-do {
+  max-width: var(--max-width);
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1 1 200px;
+  padding: 1rem;
+  max-width: 220px;
+}
+
+.feature span {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.our-results {
+  background-color: #111;
+  padding: 4rem 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.results-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  gap: 2rem;
+}
+
+.metric {
+  flex: 1 1 200px;
+  max-width: 220px;
+}
+
+.metric h3 {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.metric p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .results-metrics {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact {
+  background-color: #000;
+  padding: 4rem 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
+}
+.contact-form button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .contact-form {
+    padding: 0 1rem;
+  }
+}
+
+
